@@ -1,0 +1,87 @@
+@import 'config';
+@import 'button';
+@import 'utility';
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #0e6eff;
+    font-family: $font-stack;
+    line-height: 1.6;
+    img {
+        width: 100%;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 2rem;
+    }
+
+    .logo {
+        font-family: 'Lobster', cursive;
+        letter-spacing: 4px;
+    }
+}
+
+.showcase {
+    @include set-background($primary-color);
+    height: 100vh;
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        ul {
+            display: flex;
+            list-style: none;
+        }
+
+        li {
+            padding: 15px;
+        }
+        a {
+            color: set-text-color($primary-color);
+        }
+        a:hover {
+            color: $secondary-color;
+            text-decoration: none;
+        }
+    }
+
+    &-content {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        // margin-top: 10px;
+       .info {
+           text-align: center;
+           margin-top: 20px;
+       }
+
+        img {
+            width: 25%;
+            border-radius: 50%;
+            margin-left: 37%;
+
+        }
+
+        h1 {
+            font-size: 50px;
+            line-height: 1.2;
+        }
+        .details {
+            font-size: 20px;
+        }
+
+        .icons {
+            text-align: center;
+        }
+    }
+}

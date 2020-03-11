@@ -1,0 +1,21 @@
+$light-color: #0e6eff;
+// $font-stack:'Lobster', cursive;
+$font-stack: 'Yanone Kaffeesatz', sans-serif;
+$primary-color: #0e6eff;
+$secondary-color: #ff8700;
+
+
+//Set text color depending on backgroun
+@function set-text-color($color) {
+    @if(lightness($color) > 70){
+        @return #333;
+    } @else {
+        @return #fff;
+    }
+}
+
+//Set Background and text color mixin
+@mixin set-background($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}
