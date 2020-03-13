@@ -56,13 +56,14 @@ body {
 
     &-content {
         display: flex;
-        height: 100%;
+        // height: 100%;
         align-items: center;
         justify-content: center;
+        overflow: hidden;
         // margin-top: 10px;
        .info {
            text-align: center;
-           margin-top: 20px;
+           margin-top: 0px;
        }
 
         img {
@@ -82,6 +83,13 @@ body {
 
         .icons {
             text-align: center;
+            .icon {
+                font-size: 3rem;
+                margin-left: 1.2rem;
+                &:hover {
+                    color: red;
+                }
+            }
         }
     }
 }
